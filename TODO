@@ -1,0 +1,17 @@
+tietokantaan
+------------------
+  X  - Luodaan projektiin tietokantaan
+  X  - Luodaan sille käyttäjä
+CREATE USER 'kirjautuminen'@'localhost' IDENTIFIED BY kirjautuminen 'Q2werty';
+GRANT ALL PRIVILEGES ON *.* TO 'kirjautuminen'@'localhost';
+  X  - Luodaan taulu, johon tulee käyttäjätunnustiedot
+        - käyttäjätunnus
+        - salasana
+
+reqister.php
+-----------------------------------------------------
+Sivu, josta voidaan tehdä uusi käyttäjätunnus
+    - Validoidaan salasana (ollaan jo tehty)
+    - Validoi, että jokaista käyttäjää on vain yksi
+    - Luo tietokantaan uuden käyttäjätunnuksen
+    
