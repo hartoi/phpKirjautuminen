@@ -11,7 +11,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'kirjautuminen'@'localhost';
 reqister.php
 -----------------------------------------------------
 Sivu, josta voidaan tehdä uusi käyttäjätunnus
-    - Validoidaan salasana (ollaan jo tehty)
+- Validoidaan salasana (ollaan jo tehty)
     - Validoi, että jokaista käyttäjää on vain yksi
     - Luo tietokantaan uuden käyttäjätunnuksen
     

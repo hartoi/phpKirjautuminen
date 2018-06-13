@@ -1,13 +1,13 @@
-<html>
-<form method="POST" action="post_rekisteroi.php">
-Sähköposti<input type="text" name="sposti"><br/>
-Salasana<input type="password" name="salasana"><br/>
-Salasana Uudestaan<input type="password" name="salasana_uudestaan"><br/>
-<input type="submit" value="Rekisteröidy">
-</form>
-</html>
-
 <?php
+$salasanaVirhe = "";
+$spostiVirhe = "";
+
+if( $_SERVER["REQUEST_METHOD"] == "POST") {
+   if( empty($_POST["salasana"]) ) {
+        $salasanaVirhe = "Salasana on virheellinen";
+   }
+ 
+}
 /*
 $servername = "localhost";
 $username = "kirjautuminen";
@@ -23,3 +23,12 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 */
 ?>
+
+<html>
+<form method="POST" action="reqister.php">
+Sähköposti<input type="text" name="sposti"><br/>
+Salasana<input type="password" name="salasana"><?php echo $salasanaVirhe ?><br/>
+Salasana Uudestaan<input type="password" name="salasana_uudestaan"><br/>
+<input type="submit" value="Rekisteröidy">
+</form>
+</html>
