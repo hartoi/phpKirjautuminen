@@ -35,7 +35,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql) === TRUE) {
             // echo "Tunnuksen luonti onnistui";
             // Ohjataan kirjautumis sivulle
-            header('Location: login.php')
+            header('Location: login.php');
 
 
         } else {
