@@ -14,4 +14,8 @@ Sivu, josta voidaan tehdä uusi käyttäjätunnus
 - Validoidaan salasana (ollaan jo tehty)
     - Validoi, että jokaista käyttäjää on vain yksi
     - Luo tietokantaan uuden käyttäjätunnuksen
+
+login.php
+-----------------------------------------------------
+Kirjautumissivu
     
