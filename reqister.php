@@ -4,8 +4,17 @@ $spostiVirhe = "";
 $spostiValue = "";
 $sqlVirhe = "";
 
+function valmisteleSyote($syote){
+    $syote = trim($syote);
+    $syote = stripslashes($syote);
+    $syote = htmlspecialchars($syote);
+    return $syote;
+}
 
 if( $_SERVER["REQUEST_METHOD"] == "POST") {
+    $_POST["sposti"] = valmisteleSyote($_POST["sposti"]);
+    $_POST["salasana"] = valmisteleSyote($_POST["salasana"]);
+
     $spostiValue = $_POST["sposti"];
 
     if( empty($_POST["sposti"]) ) {
