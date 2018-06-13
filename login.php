@@ -1,9 +1,11 @@
 <?php
 
 function valmisteleSyote($syote){
+ /*
     $syote = trim($syote);
     $syote = stripslashes($syote);
     $syote = htmlspecialchars($syote);
+*/
     return $syote;
 }
 
@@ -23,8 +25,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Tekninen ongelma. Yritä palvelua uudestaan 5 min. kuluttua." . $conn->connect_error);
     } 
-    $sql = "SELECT * FROM kayttajat WHERE 
-            email='".$_POST["sposti"]."' AND 
+    $sql = 
+    "SELECT * FROM kayttajat WHERE 
+     email='".$_POST["sposti"]."' AND 
             salasana='".$_POST["salasana"]."'";
     echo $sql;
     $result = $conn->query($sql);

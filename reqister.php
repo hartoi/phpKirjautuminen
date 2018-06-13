@@ -5,9 +5,11 @@ $spostiValue = "";
 $sqlVirhe = "";
 
 function valmisteleSyote($syote){
+   /*
     $syote = trim($syote);
     $syote = stripslashes($syote);
     $syote = htmlspecialchars($syote);
+   */
     return $syote;
 }
 
